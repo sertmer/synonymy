@@ -22,12 +22,14 @@
     color: #091543;
   }
   .go {
-    width: 3em;
-    height: 2em;
+    width: 4em;
+    height: 3em;
     background-color: #00C853;
     color: white;
     font-weight: bold;
     margin: 0;
     text-align: center;
+    font-size: x-large;
+    font-family: 'Quicksand';
   }
 </style>
