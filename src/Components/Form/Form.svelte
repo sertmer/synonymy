@@ -1,6 +1,6 @@
 <div class='input-container'>
   <input type='text' placeholder="enter your word">
-  <input class='go' type='submit' value='go'>
+  <button class='go' type='submit'>go</button>
 </div>
 
 <style>
@@ -20,7 +20,6 @@
     font-family: 'Quicksand';
     font-size: xx-large;
     color: #091543;
-    /* text-align: center; */
   }
   .go {
     width: 3em;

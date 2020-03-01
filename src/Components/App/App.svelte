@@ -1,11 +1,13 @@
 <script>
 	import Header from '../Header/Header.svelte';
 	import Form from '../Form/Form.svelte';
+	import SynonymContainer from '../SynonymContainer/SynonymContainer.svelte';
 </script>
 
 <main>
  <Header />
  <Form />
+ <SynonymContainer />
 </main>
 
 <style>
