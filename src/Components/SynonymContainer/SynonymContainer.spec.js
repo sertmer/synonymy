@@ -4,14 +4,18 @@ import '@testing-library/jest-dom/extend-expect';
 
 describe('SynonymContainer', () => {
   it('should render the correct word', () => {
-    const {getByText} = render(SynonymContainer, {originalWord: 'hello'})
+    const {getByText} = render(SynonymContainer, {originalWord: 'hello', synonyms: [
+      'hi',
+      'hey',
+      'sup',
+    ]})
 
-    const originalWord = getByText('hello')
+    const originalWord = getByText('Synonyms for hello')
 
     expect(originalWord).toBeInTheDocument();
   })
 
-  it.skip('should render the correct word', () => {
+  it('should render the correct word', () => {
     const {getByText} = render(SynonymContainer, {originalWord: 'hello', synonyms: [
       'hi',
       'hey',
