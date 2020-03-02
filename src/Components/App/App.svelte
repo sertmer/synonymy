@@ -23,7 +23,7 @@
  {#if synonyms.length}
  <SynonymContainer originalWord={originalWord} synonyms={synonyms}/>
  {:else}
- <p>Search for a word to view it's synonyms</p>
+ <p>Search for a word to view synonyms</p>
  {/if}
  </main>
 	

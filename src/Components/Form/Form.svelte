@@ -3,6 +3,7 @@
   
   const dispatch = createEventDispatcher();
   let word = ''
+  let error = ''
   
   const onSubmit = e => {
     e.preventDefault();
@@ -17,6 +18,15 @@
     placeholder="enter your word" 
     bind:value={word}
   >
+  {#if !word}
+  <button 
+    class='disabled-go' 
+    type='submit'
+    disabled
+  >
+    go
+  </button>
+  {:else}
   <button 
     class='go' 
     type='submit'
@@ -24,6 +34,7 @@
   >
     go
   </button>
+  {/if}
  </div>
   
  <style>
@@ -48,6 +59,17 @@
     width: 4em;
     height: 3em;
     background-color: #00C853;
+    color: white;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+    font-size: x-large;
+    font-family: 'Quicksand';
+  }
+  .disabled-go {
+    width: 4em;
+    height: 3em;
+    background-color: grey;
     color: white;
     font-weight: bold;
     margin: 0;
