@@ -21,7 +21,10 @@
  <Header />
  <Form on:submitword={getSynonyms}/>
  {#if synonyms.length}
- <SynonymContainer originalWord={originalWord} synonyms={synonyms}/>
+ <SynonymContainer 
+		originalWord={originalWord} 
+		synonyms={synonyms}
+	/>
  {:else}
  <p>Search for a word to view synonyms</p>
  {/if}
