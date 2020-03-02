@@ -6,10 +6,20 @@ import { render, fireEvent } from '@testing-library/svelte';
 
 import '@testing-library/jest-dom/extend-expect';
 
-it('shows the correct heading', () => {
-  const { getByText, getByTestId } = render(Header)
+describe('Header', () => {
+  it('shows the correct heading', () => {
+    const { getByText } = render(Header)
+  
+    const synonymy = getByText('synonymy')
+  
+    expect(synonymy).toBeInTheDocument();
+  })
 
-  const synonymy = getByText('synonymy')
+  it('shows the correct p tag', () => {
+    const {getByText} = render(Header)
 
-  expect(synonymy).toBeInTheDocument();
+    const phonetic = getByText('[si-non-uh-mee]')
+
+    expect(phonetic).toBeInTheDocument();
+  })
 })
