@@ -5,14 +5,17 @@
 	
 	let synonyms = []
 	let originalWord = ''
+	let loading = false
 
 	const getSynonyms = (e) => {
 		originalWord = e.detail
+		loading = true
 		fetch(
 		 `https://www.dictionaryapi.com/api/v3/references/thesaurus/json/${originalWord}?key=67f08311-bb1f-477c-bd38-cc6dfb68104d`
 		)
 		.then(res => res.json())
 		.then(data => synonyms = data[0].meta.syns[0])
+		.then(res => loading = false)
 		.catch(err => console.log(err))
 	}
  </script>
@@ -27,6 +30,9 @@
 	/>
  {:else}
  <p>Search for a word to view synonyms</p>
+ {/if}
+ {#if loading}
+ <p>loading</p>
  {/if}
  </main>
 	
