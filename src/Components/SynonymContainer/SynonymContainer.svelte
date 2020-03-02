@@ -30,7 +30,7 @@
     flex-flow: row wrap;
     overflow: auto;
   }
-  h3 {
+  h2 {
     font-family: 'Quicksand';
   }
 
