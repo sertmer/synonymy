@@ -1,9 +1,32 @@
-<div class='input-container'>
-  <input type='text' placeholder="enter your word">
-  <button class='go' type='submit'>go</button>
-</div>
-
-<style>
+<script>
+  import { createEventDispatcher } from 'svelte';
+  
+  const dispatch = createEventDispatcher();
+  let word = ''
+  
+  const onSubmit = e => {
+    e.preventDefault();
+    dispatch('submitword', word)
+    word = ''
+  }
+ </script>
+  
+ <div class='input-container'>
+  <input 
+    type='text' 
+    placeholder="enter your word" 
+    bind:value={word}
+  >
+  <button 
+    class='go' 
+    type='submit'
+    on:click={onSubmit}
+  >
+    go
+  </button>
+ </div>
+  
+ <style>
   .input-container {
     width: 100%;
     height: 60%;
@@ -32,4 +55,5 @@
     font-size: x-large;
     font-family: 'Quicksand';
   }
-</style>
+ </style>
+ 
