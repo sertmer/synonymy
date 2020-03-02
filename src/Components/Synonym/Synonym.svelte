@@ -1,8 +1,15 @@
 <script>
+  import { createEventDispatcher } from 'svelte';
+  const dispatch = createEventDispatcher();
   export let word
+
+  const clickHandler = e => {
+    e.preventDefault();
+    dispatch('getsecondarysynonyms', word)
+  }
 </script>
 
-<div>
+<div on:click={clickHandler}>
   <p>{word}</p>
 </div>
 
