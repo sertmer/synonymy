@@ -1,9 +1,5 @@
 import Header from './Header.svelte';
-
-
 import { render, fireEvent } from '@testing-library/svelte';
-
-
 import '@testing-library/jest-dom/extend-expect';
 
 describe('Header', () => {
