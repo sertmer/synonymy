@@ -43,22 +43,22 @@ describe('apiCalls', () => {
       expect(fetchSynonyms(mockOriginalWord)).resolves.toEqual(mockResponse)
     })
 
-    it.skip('should throw an error if fetch fails', () => {
+    it('should throw an error if fetch fails', () => {
       window.fetch = jest.fn().mockImplementation(() => {
         return Promise.resolve({
           ok: false
         })
       })
 
-      expect(getNasaImages()).rejects.toEqual(Error('error fetching nasa images'))
+      expect(fetchSynonyms(mockOriginalWord)).rejects.toEqual(Error('Error fetching synonyms'))
     })
 
-    it.skip('should return an error if promise rejects', () => {
+    it('should return an error if promise rejects', () => {
       window.fetch = jest.fn().mockImplementation(() => {
         return Promise.reject(Error('fetch failed'))
       })
 
-      expect(getNasaImages()).rejects.toEqual(Error('fetch failed'))
+      expect(fetchSynonyms()).rejects.toEqual(Error('fetch failed'))
     })
   })
 })
