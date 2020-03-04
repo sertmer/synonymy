@@ -1,93 +1,44 @@
-*Looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
+# Synonymy
 
----
+**Synonymy** is an Svelte application that lets users search for synonyms of a given word, and find synonyms for their synonyms!
 
-# svelte app
+## Table of Contents
+<!--ts-->
 
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
+- [Table of Contents](#table-of-contents)
+- [Set Up](#set-up)
+- [Screenshots](#screenshots)
+- [Tech Stack](#tech-stack)
+- [Goals](#goals)
 
-To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
+<!--te-->
 
-```bash
-npx degit sveltejs/template svelte-app
-cd svelte-app
+## Set Up
+#### 1. Clone the repository
 ```
-
-*Note that you will need to have [Node.js](https://nodejs.org) installed.*
-
-
-## Get started
-
-Install the dependencies...
-
-```bash
-cd svelte-app
+git clone https://github.com/sertmer/synonymy
+```
+#### 2. Install dependencies
+```
 npm install
 ```
-
-...then start [Rollup](https://rollupjs.org):
-
-```bash
+#### 3. Start the Server
+``` 
 npm run dev
 ```
 
-Navigate to [localhost:5000](http://localhost:5000). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
 
-By default, the server will only respond to requests from localhost. To allow connections from other computers, edit the `sirv` commands in package.json to include the option `--host 0.0.0.0`.
+## Screenshots
 
-
-## Building and running in production mode
-
-To create an optimised version of the app:
-
-```bash
-npm run build
-```
-
-You can run the newly built app with `npm run start`. This uses [sirv](https://github.com/lukeed/sirv), which is included in your package.json's `dependencies` so that the app will work when you deploy to platforms like [Heroku](https://heroku.com).
+<img width="692" alt="Screen Shot 2020-03-03 at 7 28 17 PM  ✨ " src="https://user-images.githubusercontent.com/49926352/75839152-51a4a680-5d85-11ea-83a4-7e9b0f188c7a.png">
+<img width="692" alt="Screen Shot 2020-03-03 at 7 27 48 PM  ✨ " src="https://user-images.githubusercontent.com/49926352/75839156-536e6a00-5d85-11ea-8d3d-5e282eb1394a.png">
+<img width="722" alt="Screen Shot 2020-03-01 at 1 05 28 PM  ✨ " src="https://user-images.githubusercontent.com/49926352/75839158-55382d80-5d85-11ea-84b8-55aa75db62fa.png">
 
 
-## Single-page app mode
+## Tech Stack
+ - [Svelte](https://svelte.dev/)
+ - [Svelte Testing Library](https://testing-library.com/docs/svelte-testing-library/intro)
+ - [MERRIAM-WEBSTER'S COLLEGIATE® THESAURUS API](https://dictionaryapi.com/products/api-collegiate-thesaurus)
 
-By default, sirv will only respond to requests that match files in `public`. This is to maximise compatibility with static fileservers, allowing you to deploy your app anywhere.
-
-If you're building a single-page app (SPA) with multiple routes, sirv needs to be able to respond to requests for *any* path. You can make it so by editing the `"start"` command in package.json:
-
-```js
-"start": "sirv public --single"
-```
-
-
-## Deploying to the web
-
-### With [now](https://zeit.co/now)
-
-Install `now` if you haven't already:
-
-```bash
-npm install -g now
-```
-
-Then, from within your project folder:
-
-```bash
-cd public
-now deploy --name my-project
-```
-
-As an alternative, use the [Now desktop client](https://zeit.co/download) and simply drag the unzipped project folder to the taskbar icon.
-
-### With [surge](https://surge.sh/)
-
-Install `surge` if you haven't already:
-
-```bash
-npm install -g surge
-```
-
-Then, from within your project folder:
-
-```bash
-npm run build
-surge public my-project.surge.sh
-```
+## Goals
+* Learn a new framework (Svelte)
