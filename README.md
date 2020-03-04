@@ -30,9 +30,12 @@ npm run dev
 
 ## Screenshots
 
-<img width="692" alt="Screen Shot 2020-03-03 at 7 28 17 PM  ✨ " src="https://user-images.githubusercontent.com/49926352/75839152-51a4a680-5d85-11ea-83a4-7e9b0f188c7a.png">
 <img width="692" alt="Screen Shot 2020-03-03 at 7 27 48 PM  ✨ " src="https://user-images.githubusercontent.com/49926352/75839156-536e6a00-5d85-11ea-8d3d-5e282eb1394a.png">
-<img width="722" alt="Screen Shot 2020-03-01 at 1 05 28 PM  ✨ " src="https://user-images.githubusercontent.com/49926352/75839158-55382d80-5d85-11ea-84b8-55aa75db62fa.png">
+
+<img width="692" alt="Screen Shot 2020-03-03 at 7 28 17 PM  ✨ " src="https://user-images.githubusercontent.com/49926352/75839152-51a4a680-5d85-11ea-83a4-7e9b0f188c7a.png">
+
+<img width="1431" alt="Screen Shot 2020-03-03 at 7 28 41 PM  ✨ " src="https://user-images.githubusercontent.com/49926352/75839254-a47e5e00-5d85-11ea-91c1-3fd8975077c7.png">
+
 
 
 ## Tech Stack
