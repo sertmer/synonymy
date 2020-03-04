@@ -1,14 +1,12 @@
 <script>
   import Synonym from '../Synonym/Synonym.svelte';
+  import { fetchSynonyms } from '../../apiCalls.js';
   export let synonyms
   export let originalWord
 
-  const getSynonyms = (e) => {
+  const getSecondSynonyms = (e) => {
 		originalWord = e.detail
-		fetch(
-		 `https://www.dictionaryapi.com/api/v3/references/thesaurus/json/${originalWord}?key=67f08311-bb1f-477c-bd38-cc6dfb68104d`
-		)
-		.then(res => res.json())
+		return fetchSynonyms(originalWord)
 		.then(data => synonyms = data[0].meta.syns[0])
 		.catch(err => console.log(err))
 	}
@@ -18,7 +16,7 @@
 <div class="container">
   {#each synonyms as word}
   <Synonym 
-    on:getsecondarysynonyms={getSynonyms}
+    on:getsecondarysynonyms={getSecondSynonyms}
     word={word}
   />
   {/each}
