@@ -39,8 +39,8 @@ describe('apiCalls', () => {
       expect(window.fetch).toHaveBeenCalledWith(`https://www.dictionaryapi.com/api/v3/references/thesaurus/json/${mockOriginalWord}?key=67f08311-bb1f-477c-bd38-cc6dfb68104d`)
     })
 
-    it('should return an object containing the images and info', () => {
-      expect(getNasaImages()).resolves.toEqual(mockResponse)
+    it('should return the synonyms', () => {
+      expect(fetchSynonyms(mockOriginalWord)).resolves.toEqual(mockResponse)
     })
 
     it.skip('should throw an error if fetch fails', () => {
