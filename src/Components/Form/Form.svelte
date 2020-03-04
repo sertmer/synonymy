@@ -12,7 +12,7 @@
   }
  </script>
   
- <div class='input-container'>
+ <form class='input-container'>
   <input 
     type='text' 
     placeholder="enter your word" 
@@ -35,7 +35,7 @@
     go
   </button>
   {/if}
- </div>
+ </form>
   
  <style>
   .input-container {
